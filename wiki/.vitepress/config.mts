@@ -11,7 +11,7 @@ const commonSidebarConfig = {
   hyphenToSpace: true,
   underscoreToSpace: true,
   collapsed: true,
-  collapseDepth: 2,
+  collapseDepth: 1,
   capitalizeFirst: true,
   useTitleFromFileHeading: true,
   useTitleFromFrontmatter: true,
