@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "vitepress dev wiki",
+    "build": "vitepress build wiki",
+    "preview": "vitepress preview wiki"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress-i18n": "^1.3.0",
+    "vitepress-sidebar": "^1.28.0"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}
