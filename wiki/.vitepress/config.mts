@@ -77,7 +77,7 @@ const vitePressConfig: UserConfig = {
   },
   markdown: {
     lineNumbers: true,
-    math: false,
+    math: true,
   },
   lastUpdated: true,
   base: '/wiki/',
