@@ -1,12 +1,16 @@
 import DefaultTheme from 'vitepress/theme';
-import './custom.css';
-import MyLayout from './Layout.vue'
+import Layout from './components/Layout.vue'
+import ElementPlus from 'element-plus'
+import Breadcrumb from './components/Breadcrumb.vue';
 
-//export default DefaultTheme;
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css' // required for dark mode
+import './custom.css';
 
 export default {
     extends: DefaultTheme,
-    // override the Layout with a wrapper component that
-    // injects the slots
-    Layout: MyLayout
+    Layout,
+    enhanceApp({ app }) {
+        app.use(ElementPlus); // Register component library
+    },
 }

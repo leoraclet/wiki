@@ -11,14 +11,16 @@ const commonSidebarConfig = {
   hyphenToSpace: true,
   underscoreToSpace: true,
   collapsed: true,
-  collapseDepth: 1,
+  collapseDepth: 2,
   capitalizeFirst: true,
+  useFolderLinkFromIndexFile: true,
   useTitleFromFileHeading: true,
   useTitleFromFrontmatter: true,
   useFolderTitleFromIndexFile: true,
   sortMenusByName: true,
   sortFolderTo: 'bottom' as 'bottom' | 'top' | null | undefined,
   includeEmptyFolder: true,
+  folderLinkNotIncludesFileName: true,
 };
 
 const vitePressI18nConfig = {
@@ -42,9 +44,9 @@ const vitePressI18nConfig = {
     },
     fr: {
       nav: [
-        { text: 'Home', link: '/' },
+        { text: 'Accueil', link: '/' },
         { text: 'A propos', link: '/about' },
-        { Text: 'Pour commencer', link: '/pour-commencer' },
+        { Text: 'Pour commencer', link: '/getting-started' },
       ],
     },
   },
@@ -87,9 +89,10 @@ const vitePressConfig: UserConfig = {
     'en/:rest*': ':rest*'
   },
   head: [
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/logo-32.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/logo-16.png' }],
-    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/wiki/logo-32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/wiki/logo-16.png' }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/wiki/favicon.ico' }],
+    ['link', { rel: 'shortcut icon', href: '/wiki/favicon.ico' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en' }],
     ['meta', { property: 'og:title', content: 'HackingWiki | A simple Wiki for CTF players and Hackers' }],

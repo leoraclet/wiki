@@ -8,8 +8,8 @@ hero:
   tagline: Un simple Wiki pour les hackers et joueurs de CTF
   actions:
     - theme: brand
-      text: Pour commencer
-      link: /fr/pour-commencer
+      text: Commencer
+      link: /fr/getting-started
 ---
 
 <style>
