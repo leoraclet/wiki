@@ -44,9 +44,9 @@ const vitePressI18nConfig = {
     },
     fr: {
       nav: [
-        { text: 'Accueil', link: '/' },
-        { text: 'A propos', link: '/about' },
-        { Text: 'Pour commencer', link: '/getting-started' },
+        { text: 'Accueil', link: '/fr/' },
+        { text: 'A propos', link: '/fr/about' },
+        { Text: 'Pour commencer', link: '/fr/getting-started' },
       ],
     },
   },
