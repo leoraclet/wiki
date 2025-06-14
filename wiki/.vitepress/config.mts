@@ -27,13 +27,14 @@ const vitePressI18nConfig = {
   locales: langs,
   rootLocale: defaultLocale,
   description: {
-    en: 'Le WiKi des Hackers',
+    en: 'Le Wiki des Hackers',
     fr: 'The Hackers Wiki'
   },
   title: {
-    en: 'The Hacking WiKi',
-    fr: 'The Hacking WiKi'
+    en: 'The Hacking Wiki',
+    fr: 'The Hacking Wiki'
   },
+  titleTemplate: false,
   themeConfig: {
     en: {
       nav: [
@@ -66,7 +67,9 @@ const vitePressConfig: UserConfig = {
       })
     ]),
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/leoraclet' }
+      { icon: 'github', link: 'https://github.com/leoraclet' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/leoraclet/' },
+      { icon: 'discord', link: 'https://discordapp.com/users/454935749767200768' },
     ],
     search: {
       provider: 'local'
@@ -75,11 +78,18 @@ const vitePressConfig: UserConfig = {
       message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2024 <a href="https://github.com/leoraclet">N£utr0nys</a>'
     },
-    logo: { src: '/logo-32.png', width: 24, height: 24 },
+    logo: { src: '/favicon-32x32.png', width: 24, height: 24 },
+    outline: 'deep',
   },
   markdown: {
     lineNumbers: true,
     math: true,
+    toc: {
+      level: [1, 2, 3, 4, 5]
+    },
+    headers: {
+      level: [1, 2, 3, 4, 5],
+    }
   },
   lastUpdated: true,
   base: '/wiki/',
@@ -89,8 +99,8 @@ const vitePressConfig: UserConfig = {
     'en/:rest*': ':rest*'
   },
   head: [
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/wiki/logo-32.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/wiki/logo-16.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/wiki/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/wiki/favicon-16x16.png' }],
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/wiki/favicon.ico' }],
     ['link', { rel: 'shortcut icon', href: '/wiki/favicon.ico' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -98,7 +108,7 @@ const vitePressConfig: UserConfig = {
     ['meta', { property: 'og:title', content: 'HackingWiki | A simple Wiki for CTF players and Hackers' }],
     ['meta', { property: 'og:site_name', content: 'HackingWiki' }],
     ['meta', { property: 'og:image', content: 'https://vitepress.dev/vitepress-og.jpg' }],
-    ['meta', { property: 'og:url', content: 'https://vitepress.dev/' }],
+    ['meta', { property: 'og:url', content: 'https://leoraclet.github.io/wiki/' }],
   ],
 };
 

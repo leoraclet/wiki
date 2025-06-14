@@ -27,7 +27,7 @@ if (frontmatter.value.breadcrumb !== false || typeof frontmatter.value.breadcrum
 	function resolveMatchedLink(filePath: string, items: Array<DefaultTheme.SidebarItem>): true | undefined {
 		for (const item of items) {
 			breadcrumbItems.push({ text: item.text, link: item.link });
-			if (item.link?.replace('index.md', '') === filePath) {
+			if (item.link?.replace('index.md', '').replace('/fr/', '/') === filePath) {
 				return true;
 			} else if (item.items && item.items.length >= 1) {
 				if (resolveMatchedLink(filePath, item.items)) {
@@ -50,6 +50,8 @@ if (frontmatter.value.breadcrumb !== false || typeof frontmatter.value.breadcrum
 			}
 		}
 
+		console.warn(sidebar.value);
+		console.warn(filePath);
 		resolveMatchedLink(filePath, sidebar.value);
 
 		let breadcrumbHtmlStr = '';

@@ -4,12 +4,24 @@ layout: home
 
 hero:
   name: "The Hacking WiKi"
-  text: "Source de connaissances"
-  tagline: Un simple Wiki pour les hackers et joueurs de CTF
+  text: "Puit de connaissance"
+  tagline: Un simple Wiki pour les Apprentis et Hackers
   actions:
     - theme: brand
-      text: Commencer
+      text: C'est parti
       link: /fr/getting-started
+
+features:
+  - icon: 🏴
+    title: CTF
+    details: Résultats et Writeups de CTF - Cryptanalyse, OSINT, Rétro-Ingénierie, et autres ...
+  - icon: 🎓
+    title: Cours et Exercices
+    details: Physique, Mathématiques, électronique et informatique
+  - icon: 🦾
+    title: Robotique
+    details: Apprenez à construire et programmer un robot autonome de A à Z
+
 ---
 
 <style>

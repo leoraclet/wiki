@@ -1,8 +1,8 @@
 import DefaultTheme from 'vitepress/theme';
 import Layout from './components/Layout.vue'
 import ElementPlus from 'element-plus'
-import Breadcrumb from './components/Breadcrumb.vue';
 
+// CSS
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css' // required for dark mode
 import './custom.css';

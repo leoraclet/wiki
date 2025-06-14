@@ -4,12 +4,23 @@ layout: home
 
 hero:
   name: "The Hacking WiKi"
-  text: "Sources of knowledge"
-  tagline: A simple Wiki for CTF players and Hackers
+  text: "Source of knowledge"
+  tagline: A simple Wiki for Learners and Hackers
   actions:
     - theme: brand
-      text: Getting Started
+      text: Let's go
       link: /getting-started
+
+features:
+  - icon: 🏴
+    title: CTF
+    details: Results and Writeups of CTF - Cryptanalysis, OSINT, Reverse Engineering, and others ...
+  - icon: 🎓
+    title: Courses and Exercises
+    details: Physics, Mathematics, electronics and computer science
+  - icon: 🦾
+    title: Robotic
+    details: Learn to build and a programm a fully autonomous robot from scratch
 ---
 
 <style>
