@@ -2,7 +2,7 @@
 
 Bienvenue 👋,
 
-Vous trouverez ici mes résultats lors des diférents CTF auxquels j'au pu particper depuis plusieurs années, ainsi que des Writeups pour
+Vous trouverez ici mes résultats lors des diférents CTF auxquels j'au pu participer depuis plusieurs années, ainsi que des Writeups pour
 ceux que j'ai pu résoudre et pour lesquels j'ai pris le temps de rédiger un solution.
 
 **Bonne lecture !**

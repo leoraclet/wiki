@@ -23,7 +23,7 @@ Si besoin, tous les fichiers ainsi que tous les détails des challenges en quest
 
 ::: info ℹ️ INFO
 Malheuresement, ayant été pris par la participation à la Coupe de France de Robotique avec l'association de mon école, pas de "tryhard" cette année, mais
-j'ai quand même pu y dédier plusieurs soirées pour sécuriser un **Top 100** également.
+j'ai quand même pu y dédier plusieurs soirées pour sécuriser un **Top 100** cette année également.
 :::
 
 **Chiffres clés :**

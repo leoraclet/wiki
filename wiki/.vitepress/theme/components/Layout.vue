@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
+
 import { useData, inBrowser } from "vitepress";
 import { watchEffect, nextTick, provide } from "vue";
+
 import Breadcrumb from "./Breadcrumb.vue";
+import Comments from './Comments.vue'
 
 const { Layout } = DefaultTheme;
 const { lang, isDark } = useData();
@@ -37,6 +40,9 @@ watchEffect(() => {
   <Layout>
     <template #doc-before>
       <Breadcrumb />
+    </template>
+    <template #doc-after>
+      <Comments />
     </template>
   </Layout>
 </template>

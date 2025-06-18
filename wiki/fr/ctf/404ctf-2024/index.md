@@ -39,5 +39,5 @@ Pour ma première participation, j'ai pu atteindre une belle place dont je suis 
 ## Challenges
 
 ::: info ℹ️ INFO
-En cours de recontrusction ...
+En cours de reconstruction ...
 :::
