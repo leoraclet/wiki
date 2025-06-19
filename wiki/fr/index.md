@@ -10,6 +10,9 @@ hero:
     - theme: brand
       text: C'est parti
       link: /fr/getting-started
+  image:
+    src: /vitepress-logo.svg
+    alt: VitePress
 
 features:
   - icon: 🏴

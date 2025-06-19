@@ -10,6 +10,9 @@ hero:
     - theme: brand
       text: Let's go
       link: /getting-started
+  image:
+    src: /vitepress-logo.svg
+    alt: VitePress
 
 features:
   - icon: 🏴
