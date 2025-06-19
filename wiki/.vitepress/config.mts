@@ -31,10 +31,9 @@ const vitePressI18nConfig = {
     fr: 'The Hackers Wiki'
   },
   title: {
-    en: 'The Hacking Wiki',
-    fr: 'The Hacking Wiki'
+    en: 'Hack&Learn',
+    fr: 'Hack&Learn'
   },
-  titleTemplate: false,
   themeConfig: {
     en: {
       nav: [
@@ -94,6 +93,7 @@ const vitePressConfig: UserConfig = {
   lastUpdated: true,
   base: '/wiki/',
   cleanUrls: true,
+  titleTemplate: 'Hack&Learn | :title',
   metaChunk: true,
   rewrites: {
     'en/:rest*': ':rest*'

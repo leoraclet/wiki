@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "The Hacking WiKi"
-  text: "Puit de connaissance"
-  tagline: Un simple Wiki pour les Apprentis et Hackers
+  name: "Hack&Learn"
+  text: "Source de savoir"
+  tagline: Un simple Wiki pour les Apprentis et les Hackers
   actions:
     - theme: brand
       text: C'est parti
@@ -21,7 +21,6 @@ features:
   - icon: 🦾
     title: Robotique
     details: Apprenez à construire et programmer un robot autonome de A à Z
-
 ---
 
 <style>

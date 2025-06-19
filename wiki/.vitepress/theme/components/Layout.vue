@@ -34,6 +34,21 @@ watchEffect(() => {
     document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2040 00:00:00 UTC; path=/`;
   }
 });
+
+function updateGiscusTheme() {
+  const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  const iframe = document.querySelector('iframe.giscus-frame')
+  if (!iframe) return
+  iframe.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app')
+}
+
+const observer = new MutationObserver(updateGiscusTheme)
+observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+
+window.onload = () => {
+  updateGiscusTheme()
+}
+
 </script>
 
 <template>

@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "The Hacking WiKi"
+  name: "Hack&Learn"
   text: "Source of knowledge"
   tagline: A simple Wiki for Learners and Hackers
   actions:
