@@ -50,8 +50,6 @@ if (frontmatter.value.breadcrumb !== false || typeof frontmatter.value.breadcrum
 			}
 		}
 
-		console.warn(sidebar.value);
-		console.warn(filePath);
 		resolveMatchedLink(filePath, sidebar.value);
 
 		let breadcrumbHtmlStr = '';
