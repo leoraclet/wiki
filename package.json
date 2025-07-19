@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "vitepress dev wiki",
-    "build": "vitepress build wiki",
-    "preview": "vitepress preview wiki"
+    "dev": "bunx --bun vitepress dev wiki",
+    "build": "bunx --bun vitepress build wiki",
+    "preview": "bunx --bun vitepress preview wiki"
   },
   "devDependencies": {
     "element-plus": "^2.9.11",
