@@ -1,4 +1,4 @@
-<div align="center"><img src="./wiki/public/favicon-32x32.png"></div>
+<div align="center"><img style="width: 300px" src="./wiki/public/wiki.png"></div>
 <br>
 <h1 align="center">Hack&Learn</h1>
 
