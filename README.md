@@ -7,6 +7,11 @@
 ![license](https://img.shields.io/github/license/leoraclet/hacking)
 ![language](https://img.shields.io/github/languages/top/leoraclet/hacking)
 ![lastcommit](https://img.shields.io/github/last-commit/leoraclet/hacking)
+<br>
+![Language](https://img.shields.io/badge/Language-MDX-1d50de)
+![Libraries](https://img.shields.io/badge/Framework-Vue-fa8925)
+![Size](https://img.shields.io/badge/Size-62Mo-f12222)
+![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
 </div>
 
@@ -28,12 +33,10 @@ This repository hosts the source code for my personnal Wiki.
 **Directories**
 
 - [**`wiki`**](./wiki/) - Source code
-  - [**public**](./wiki/public/) - Resources
-  - [**fr**](./wiki/fr/) - Contents in French
-  - [**en**](./wiki/en/) - Contents in English
-  - [**.vitepress**](./wiki/.vitepress) - Configuration and build files
-- [**scripts**](./scripts/) - Custom scripts to generate static and generic contents like tables,
-  lists and others.
+  - [**`public`**](./wiki/public/) - Resources
+  - [**`fr`**](./wiki/fr/) - Contents in French
+  - [**`en`**](./wiki/en/) - Contents in English
+  - [**`.vitepress`**](./wiki/.vitepress) - Configuration and build files
 
 **Files**
  - [**deploy.yml**](./.github/workflows/deploy.yml) - Automatic worflow to deploy on Github pages
