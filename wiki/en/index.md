@@ -1,29 +1,44 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
+# VitePress Home Page Configuration
+# Reference: https://vitepress.dev/reference/default-theme-home-page
+
 layout: home
 
+# Hero Section (Main Banner)
 hero:
   name: "Hack&Learn"
-  text: "Source of knowledge"
-  tagline: A simple Wiki for Learners and Hackers
+  text: "Open Knowledge Hub"
+  tagline: An educational wiki for learning and security enthusiasts.
   actions:
     - theme: brand
-      text: Let's go
+      text: Start Exploring
       link: /getting-started
   image:
     src: /vitepress-logo.svg
-    alt: VitePress
+    alt: Hack&Learn Logo
 
+# Featured Sections
 features:
-  - icon: 🏴
-    title: CTF
-    details: Results and Writeups of CTF - Cryptanalysis, OSINT, Reverse Engineering, and others ...
-  - icon: 🎓
-    title: Courses and Exercises
-    details: Physics, Mathematics, electronics and computer science
-  - icon: 🦾
-    title: Robotic
-    details: Learn to build and a programm a fully autonomous robot from scratch
+  - icon: "🏴"
+    title: "Capture The Flag (CTF)"
+    details: Competition archives with detailed writeups - Cryptography, OSINT, reverse engineering and other technical challenges
+    link: /en/ctf
+
+  - icon: "🎓"
+    title: "Learning Resources"
+    details: Practical courses and exercises in physics, mathematics, electronics and computer science
+    link: /en/school
+
+  - icon: "🦾"
+    title: "Applied Robotics"
+    details: Complete guide to designing and programming autonomous robots from theory to practice
+    link: /en/robotics
+
+  - icon: "🛡️"
+    title: "Cybersecurity"
+    details: "Methodologies and techniques for ethical hacking and offensive security"
+    link: /en/cyber
+
 ---
 
 <style>

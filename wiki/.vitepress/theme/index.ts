@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
+import "@catppuccin/vitepress/theme/mocha/mauve.css";
 import Layout from './components/Layout.vue'
 import ElementPlus from 'element-plus'
 

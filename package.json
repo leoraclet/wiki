@@ -16,6 +16,7 @@
     "vitepress-sidebar": "^1.28.0"
   },
   "dependencies": {
+    "@catppuccin/vitepress": "^0.1.2",
     "markdown-it": "^14.1.0"
   }
 }

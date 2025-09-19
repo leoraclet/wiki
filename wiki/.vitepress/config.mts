@@ -2,8 +2,9 @@ import { defineConfig, UserConfig } from 'vitepress';
 import { withI18n } from 'vitepress-i18n';
 import { generateSidebar } from 'vitepress-sidebar';
 
-const defaultLocale: string = 'en';
-const langs: string[] = [defaultLocale, 'fr'];
+// !FIXME: Language change
+const defaultLocale: string = 'fr';
+const langs: string[] = [defaultLocale, 'en'];
 
 const commonSidebarConfig = {
   manualSortFileNameByPriority: ['introduction.md', 'guide', 'advanced-usage'],
@@ -11,7 +12,7 @@ const commonSidebarConfig = {
   hyphenToSpace: true,
   underscoreToSpace: true,
   collapsed: true,
-  collapseDepth: 2,
+  collapseDepth: 1,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: true,
   useTitleFromFileHeading: true,
@@ -23,30 +24,31 @@ const commonSidebarConfig = {
   folderLinkNotIncludesFileName: true,
 };
 
+// !FIXME: Language change
 const vitePressI18nConfig = {
   locales: langs,
   rootLocale: defaultLocale,
   description: {
-    en: 'Le Wiki des Hackers',
-    fr: 'The Hackers Wiki'
+    fr: 'Le Wiki des Hackers',
+    en: 'The Hackers Wiki',
   },
   title: {
+    fr: 'Hack&Learn',
     en: 'Hack&Learn',
-    fr: 'Hack&Learn'
   },
   themeConfig: {
-    en: {
-      nav: [
-        { text: 'Home', link: '/' },
-        { text: 'About', link: '/about' },
-        { Text: 'Getting Started', link: '/getting-started' },
-      ],
-    },
     fr: {
       nav: [
-        { text: 'Accueil', link: '/fr/' },
-        { text: 'A propos', link: '/fr/about' },
-        { Text: 'Pour commencer', link: '/fr/getting-started' },
+        { text: 'Accueil', link: '/' },
+        { text: 'A propos', link: '/about' },
+        { text: 'Pour commencer', link: '/getting-started' },
+      ],
+    },
+    en: {
+      nav: [
+        { text: 'Home', link: '/en/' },
+        { text: 'About', link: '/en/about' },
+        { text: 'Getting Started', link: '/en/getting-started' },
       ],
     },
   },
@@ -75,20 +77,29 @@ const vitePressConfig: UserConfig = {
     },
     footer: {
       message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
-      copyright: 'Copyright © 2024 <a href="https://github.com/leoraclet">N£utr0nys</a>'
+      copyright: 'Copyright © 2024-present <a href="https://github.com/leoraclet">N£utr0nys</a>'
     },
     logo: { src: '/favicon-32x32.png', width: 24, height: 24 },
-    outline: 'deep',
+    editLink: {
+      pattern: 'https://github.com/leoraclet/wiki/edit/main/wiki/:path',
+    }
   },
   markdown: {
+    theme: {
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-mocha',
+    },
     lineNumbers: true,
     math: true,
     toc: {
-      level: [1, 2, 3, 4, 5]
+      level: [1, 2, 3, 4, 5, 6]
     },
     headers: {
-      level: [1, 2, 3, 4, 5],
-    }
+      level: [1, 2, 3, 4, 5, 6],
+    },
+  },
+  sitemap: {
+    hostname: 'https://leoraclet.github.io/wiki'
   },
   lastUpdated: true,
   base: '/wiki/',
@@ -96,7 +107,7 @@ const vitePressConfig: UserConfig = {
   titleTemplate: 'Hack&Learn | :title',
   metaChunk: true,
   rewrites: {
-    'en/:rest*': ':rest*'
+    'fr/:rest*': ':rest*' // !FIXME: Language change
   },
   head: [
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/wiki/favicon-32x32.png' }],

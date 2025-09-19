@@ -32,7 +32,7 @@ Pour ma première participation, j'ai pu atteindre une belle place dont je suis 
 **Chiffres clés :**
 
 * Position finale : **63ème**
-* Nombre de points total : **10179** points
+* Nombre de points total : **10 179**
 * Nombre de challenges résolus : **~30**/72
 * Nombre de participant(e)s total (100 pts minimum) : ~3800
 

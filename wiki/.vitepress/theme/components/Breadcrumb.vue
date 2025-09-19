@@ -27,7 +27,7 @@ if (frontmatter.value.breadcrumb !== false || typeof frontmatter.value.breadcrum
 	function resolveMatchedLink(filePath: string, items: Array<DefaultTheme.SidebarItem>): true | undefined {
 		for (const item of items) {
 			breadcrumbItems.push({ text: item.text, link: item.link });
-			if (item.link?.replace('index.md', '').replace('/fr/', '/') === filePath) {
+			if (item.link?.replace('index.md', '').replace('/en/', '/') === filePath) { // !FIXME Language
 				return true;
 			} else if (item.items && item.items.length >= 1) {
 				if (resolveMatchedLink(filePath, item.items)) {
@@ -92,13 +92,15 @@ if (frontmatter.value.breadcrumb !== false || typeof frontmatter.value.breadcrum
 	font-size: small; /* 13px */
 	padding-top: 3px;
 	padding-bottom: 3px;
-	padding-left: 0px;
-	padding-right: 5px;
+	padding-left: 12px;
+	padding-right: 12px;
 	border-radius: 20px;
 }
 
-.breadcrumb .breadcrumb-item:has(a):hover {
+.breadcrumb .breadcrumb-item:hover {
+	background-color: var(--vp-custom-block-info-bg);
 	color: var(--vp-c-brand-1);
+	cursor: pointer;
 }
 
 .breadcrumb .breadcrumb-item span a {
@@ -111,12 +113,14 @@ if (frontmatter.value.breadcrumb !== false || typeof frontmatter.value.breadcrum
 
 .breadcrumb .breadcrumb-item-current {
 	background-color: var(--vp-custom-block-info-bg);
-	padding-left: 12px;
-	padding-right: 12px;
 }
 
-.breadcrumb .breadcrumb-item-current span {
+.breadcrumb .breadcrumb-item-current span a {
 	color: var(--vp-c-brand-1);
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
 .breadcrumb .breadcrumb-symbol {

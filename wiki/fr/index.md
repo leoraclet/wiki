@@ -1,30 +1,46 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
+# Configuration de la page d'accueil (format VitePress)
+# Documentation : https://vitepress.dev/reference/default-theme-home-page
+
 layout: home
 
+# Section héro (bannière principale)
 hero:
   name: "Hack&Learn"
-  text: "Source de savoir"
-  tagline: Un simple Wiki pour les Apprentis et les Hackers
+  text: "Source ouverte de connaissances"
+  tagline: Un wiki educationel pour les passionnés d'apprentissage et de sécurité informatique
   actions:
     - theme: brand
-      text: C'est parti
-      link: /fr/getting-started
+      text: Explorer le contenu
+      link: /getting-started
   image:
     src: /vitepress-logo.svg
-    alt: VitePress
+    alt: Logo Hack&Learn
 
+# Fonctionnalités mises en avant
 features:
-  - icon: 🏴
-    title: CTF
-    details: Résultats et Writeups de CTF - Cryptanalyse, OSINT, Rétro-Ingénierie, et autres ...
-  - icon: 🎓
-    title: Cours et Exercices
-    details: Physique, Mathématiques, électronique et informatique
-  - icon: 🦾
-    title: Robotique
-    details: Apprenez à construire et programmer un robot autonome de A à Z
+  - icon: "🏴"
+    title: "Capture The Flag (CTF)"
+    details: Archives de compétitions avec solutions détaillées - Cryptographie, recherche d'informations, ingénierie inverse et autres défis techniques
+    link: /ctf
+
+  - icon: "🎓"
+    title: "Ressources Pédagogiques"
+    details: Cours et exercices pratiques en physique, mathématiques, électronique et sciences informatiques
+    link: /school
+
+  - icon: "🦾"
+    title: "Robotique Appliquée"
+    details: Guide complet pour concevoir et programmer des robots autonomes, de la théorie à la pratique
+    link: /robotics
+
+  - icon: "🛡️"
+    title: "Cybersécurité"
+    details: "Méthodologies et techniques pour le hacking éthique et la sécurité offensive"
+    link: /cyber
+
 ---
+
 
 <style>
   :root {
