@@ -12,7 +12,7 @@ const commonSidebarConfig = {
   hyphenToSpace: true,
   underscoreToSpace: true,
   collapsed: true,
-  collapseDepth: 1,
+  collapseDepth: 2,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: true,
   useTitleFromFileHeading: true,
@@ -85,10 +85,6 @@ const vitePressConfig: UserConfig = {
     }
   },
   markdown: {
-    theme: {
-      light: 'catppuccin-latte',
-      dark: 'catppuccin-mocha',
-    },
     lineNumbers: true,
     math: true,
     toc: {
