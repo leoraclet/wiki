@@ -1,38 +1,59 @@
-name: deploy
+# Sample workflow for building and deploying a VitePress site to GitHub Pages
+
+name: Deploy VitePress site to Pages
 
 on:
-  # Deployment is triggered whenever a push is made to the main branch.
   push:
     branches: [main]
-  # Manually trigger deployment
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  docs:
+  # Build job
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          # "Last updated time" and other git log-related information require fetching all commit records.
-          fetch-depth: 0
-
-      - name: Setup Bun
+          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+      - name: Setup bun
         uses: oven-sh/setup-bun@v2
-
-      - name: Install dependencies
-        run: bun install
-
-      # Run the build script
-      - name: Build VuePress site
-        run: bun run build
-
-      # @see https://github.com/crazy-max/ghaction-github-pages
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
         with:
-          target_branch: gh-pages
-          build_dir: docs/.vuepress/dist
-        env:
-          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          bun-version: latest
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Install dependencies
+        run: bun install # or pnpm install / yarn install / bun install
+      - name: Build with VitePress
+        run: bun run build # or pnpm docs:build / yarn docs:build / bun run docs:build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: wiki/.vuepress/dist
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
