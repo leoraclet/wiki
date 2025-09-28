@@ -21,19 +21,15 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-bun@v2
         with:
           # 选择要使用的 node 版本
           node-version: 22
-
-
-
 
       # 运行构建脚本
       # Run the build script
       - name: Build VuePress site
         run: bun run docs:build
-
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
