@@ -20,7 +20,7 @@ jobs:
           # "Last updated time" and other git log-related information require fetching all commit records.
           fetch-depth: 0
 
-      - name: Setup Node.js
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
           # 选择要使用的 node 版本
@@ -29,7 +29,7 @@ jobs:
       # 运行构建脚本
       # Run the build script
       - name: Build VuePress site
-        run: bun run docs:build
+        run: bun run build
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
