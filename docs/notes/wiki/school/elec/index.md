@@ -1,5 +1,5 @@
 ---
-title: 🔋 Electronics
+title: Electronics 🔋
 createTime: 2025/09/25 17:59:17
 permalink: /wiki/school/elec/
 ---

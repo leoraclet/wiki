@@ -1,3 +1,8 @@
+<div align="center">
+
+![Image](./docs/.vuepress/public/plume.png)
+
+</div>
 <h1 align="center">Hack&Learn</h1>
 
 <div align="center">
@@ -19,6 +24,7 @@
 - [📖 About](#-about)
 - [📚 Libraries](#-libraries)
 - [🚀 Install \& Run](#-install--run)
+- [🤝 Contributing](#-contributing)
 - [📜 License](#-license)
 
 ## 📖 About
@@ -56,9 +62,13 @@ bun run dev
 You can also build and preview the production server using
 
 ```bash
-bun run build
-bun run preview
+bun run build && bun run preview
 ```
+
+## 🤝 Contributing
+
+> [!WARNING]
+> TODO !
 
 ## 📜 License
 

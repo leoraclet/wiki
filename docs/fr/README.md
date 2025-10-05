@@ -1,15 +1,17 @@
 ---
 pageLayout: home
+home: true
 externalLinkIcon: false
 config:
   -
-    type: hero
-    full: true
+    type: doc-hero
+    full: false
     background: tint-plate
     hero:
       name: Hack&Learn
-      tagline: Source de savoir
-      text: Un wiki pour les passionnés d'apprentissage et de sécurité informatique
+      text: Source de savoir
+      tagline: Un wiki pour les passionnés d'apprentissage et de sécurité informatique
+      image: /plume.png
       actions:
         -
           theme: brand
@@ -17,14 +19,14 @@ config:
           link: /fr/blog/
         -
           theme: alt
-          text: Wiki →
+          text: A propos →
           link: /fr/wiki/
   -
     type: features
     features:
       - icon: "🏴"
         title: "Capture The Flag (CTF)"
-        details: Archives de compétitions avec solutions détaillées - Cryptographie, recherche d'informations, ingénierie inverse et autres défis techniques
+        details: Archives de compétitions, récapitulatifs et solutions détaillées - Astuces et Idées
         link: /fr/wiki/ctf/
 
       - icon: "🎓"
@@ -42,3 +44,14 @@ config:
         details: "Méthodologies et techniques pour le hacking éthique et la sécurité offensive"
         link: /fr/wiki/cyber/
 ---
+
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, var(--vp-c-purple-1) 30%, var(--vp-c-brand-2));
+  --vp-home-hero-tagline: var(--vp-c-text-2);
+  --vp-home-hero-text: var(--vp-c-text-1);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-soft) 50%, var(--vp-c-brand-2) 50%);
+  --vp-home-hero-image-filter: blur(44px);
+}
+</style>
