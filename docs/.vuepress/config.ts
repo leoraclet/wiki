@@ -31,7 +31,7 @@ export default defineUserConfig({
   shouldPrefetch: false,
 
   theme: plumeTheme({
-    hostname: 'https://leoraclet.github.io/wiki',
+    hostname: 'wiki.neutronys.com',
     docsRepo: 'https://github.com/leoraclet/wiki',
     docsDir: 'docs',
     docsBranch: 'main',
